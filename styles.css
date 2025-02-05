@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 400px;
+    min-width: 400px;
+}*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 400px;
+    min-width: 400px;
+    background-color: rgb(46, 46, 46);
+    padding: 25px 20px;
+    border-radius: 15px;
+    /* Add gap between elements */
+    gap: 20px;
+    /* Make sure container stays 3D */
+    box-shadow: 
+    10px 10px 0px #797979,        /* Right and bottom edge */
+    -1px -1px 0px #d4ddd0,      /* Top and left highlight */
+    inset 0px 2px 5px rgba(0, 0, 0, 0.2),  /* Inner shadow for depth */
+    inset -1px -1px 3px rgba(255, 255, 255, 0.3);  /* Inner highlight */
+    transform-style: preserve-3d;
+    position: relative;
+    margin: 40px;  /* Add margin to show shadows */
+ } 
+
+
+.screen {
+        display: flex;
+        flex-grow: 1;
+        min-width: 300px;
+        margin : 10px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column-reverse;
+        background-color: #C0CCBB;
+        font-family: "Digital-7", "Calculator", monospace;
+        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        border-radius: 4px;
+        text-align: right;
+        font-size: 3.5em;
+        line-height: 1;
+        min-height: 80px;
+        /* Added isometric 3D effect */
+        box-shadow: 
+            2px 2px 0px #8a9286,        /* Right and bottom edge */
+            -1px -1px 0px #d4ddd0,      /* Top and left highlight */
+            inset 0px 2px 5px rgba(0, 0, 0, 0.2),  /* Inner shadow for depth */
+            inset -1px -1px 3px rgba(255, 255, 255, 0.3);  /* Inner highlight */
+        border: 2px solid #b2bfad;      /* Subtle border */
+        transform: perspective(500px) rotateX(2deg);  /* Slight tilt for more depth */
+     }
+
+
+.row{
+    display: flex;
+    flex-grow: 1;
+    min-width: 400px;
+    justify-content: space-evenly;
+    min-height: 100px;
+}
+
+.operate {
+    display: flex;
+    flex-grow: 1;
+    aspect-ratio: 1/1;
+    max-width: 90px;
+    min-width: 90px;
+    max-height: 90px;
+    margin:1%;
+    background-color: #d0ff64;      /* Light gray base color */
+    border-radius: 50%;             /* Make it perfectly round */
+    border: none;
+    box-shadow: 
+        2px 2px 0px #a0a0a0,       /* Right and bottom edge for 3D effect */
+        -1px -1px 0px #ffffff,      /* Top and left highlight */
+        inset 0px 0px 8px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    cursor: pointer;
+    font-family: "Digital-7", "Calculator", monospace;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease;      /* Smooth transition for press effect */
+ }
+
+ /* Press effect */
+.operate:active {
+    transform: translate(1px, 1px);  /* Slight movement when pressed */
+    box-shadow: 
+        1px 1px 0px #a0a0a0,
+        -1px -1px 0px #ffffff,
+        inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ /* Hover effect */
+ .operate:hover {
+    background-color: #e8e8e8;
+ }
+
+.number{
+    display: flex;
+    flex-grow: 1;
+    aspect-ratio: 1/1;
+    max-width: 90px;
+    min-width: 90px;
+    max-height: 90px;
+    margin:1%;
+    background-color: #f0f0f0;      /* Light gray base color */
+    border-radius: 50%;             /* Make it perfectly round */
+    border: none;
+    box-shadow: 
+        2px 2px 0px #a0a0a0,       /* Right and bottom edge for 3D effect */
+        -1px -1px 0px #ffffff,      /* Top and left highlight */
+        inset 0px 0px 8px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    cursor: pointer;
+    font-family: "Digital-7", "Calculator", monospace;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease;      /* Smooth transition for press effect */
+}
+
+ /* Press effect */
+ .number:active {
+    transform: translate(1px, 1px);  /* Slight movement when pressed */
+    box-shadow: 
+        1px 1px 0px #a0a0a0,
+        -1px -1px 0px #ffffff,
+        inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ /* Hover effect */
+ .number:hover {
+    background-color: #e8e8e8;
+ }
+
+
+#zero{
+    display: flex;
+    flex-grow: 1;
+    min-width: 200px;
+    border-radius: 10%; 
+}
