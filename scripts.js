@@ -24,6 +24,14 @@ equals.addEventListener('click',(e) => totalIt(e.target.value));
 let clears = document.getElementById("AC");
 clears.addEventListener('click',(e) => clearIt());
 
+// Add click event listener to mod button
+let modNum = document.getElementById("mod");
+modNum.addEventListener('click',(e) => modIt());
+
+// Add click event listener to invert button
+let invertNum = document.getElementById("invert");
+invertNum.addEventListener('click',(e) => invertIt());
+
 // Get reference to calculator display element
 let screenNumber = document.querySelector(".screen");
 
@@ -90,6 +98,37 @@ function clearIt(){
     len1 = 0;             
     len2 = 0; 
     screenNumber.textContent = 0;
+}
+
+// function for modulus button
+function modIt(){
+    if(operand ==''){
+        firstNumString = Number(firstNumString);
+        firstNumString = firstNumString/100;
+        firstNumString = firstNumString.toString();
+        screenNumber.textContent = firstNumString;
+    }else {
+        secondNumString = Number(secondNumString);
+        secondNumString = secondNumString/100;
+        secondNumString = secondNumString.toString();
+        screenNumber.textContent = secondNumString;
+    }
+}
+
+// function for invert button
+function invertIt(){
+    if(operand ==''){
+        firstNumString = Number(firstNumString);
+        firstNumString = firstNumString*-1;
+        firstNumString = firstNumString.toString();
+        screenNumber.textContent = firstNumString;
+    }else {
+        secondNumString = Number(secondNumString);
+        secondNumString = secondNumString*-1;
+        secondNumString = secondNumString.toString();
+        screenNumber.textContent = secondNumString;
+    }
+    
 }
 
 // Addition function with decimal rounding
